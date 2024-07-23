@@ -1,0 +1,91 @@
+/** escopo geral */
+.calendar-table {
+  border-bottom: 1px solid rgb(218, 218, 218);
+  height: 100%;
+  width: 100%;
+  /** pros tds ficarem do mesmo tamanho. */
+  table-layout: fixed;
+}
+
+#calendar-table-box-options {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#calendar-table-box-options div {
+  display: flex;
+  gap: 10px;
+}
+
+/** titulo dos dias da semana */
+.calendar-table thead tr th {
+  font-weight: 600;
+  text-align: right;
+  padding-bottom: 5px;
+  padding-right: 6px;
+}
+
+/** quadradinhos dos dias da semana */
+.calendar-table tr td {
+  border-top: 1px solid rgb(218, 218, 218);
+  border-right: 1px solid rgb(218, 218, 218);
+  cursor: pointer;
+  padding: 6px;
+  user-select: none;
+  vertical-align: top;
+  /** alinhando elemento TD verticalmente no topo */
+}
+
+.calendar-table tr td:last-child {
+  border-right: 0px;
+}
+
+/** eventos de cada dia da semana */
+.calendar-events {
+  color: white;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.calendar-events li:first-child {
+  margin-top: 6px;
+}
+
+.calendar-events li {
+  margin-bottom: 4px;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.calendar-events li:hover {
+  filter: brightness(150%);
+  transition: 0.4s;
+}
+
+.calendar-events li:last-child {
+  margin-bottom: 0px;
+}
+
+/** estilo do dia atual */
+.calendar-curr-day {
+  background-color: blue;
+  border-radius: 50%;
+  color: white;
+  font-size: 10px;
+  padding: 6px;
+}
+
+/** controle da celula de cada dia do calendario */
+.calendar-day-outmonth {
+  color: rgb(197, 197, 197);
+}
+
+.calendar-day-outmonth .calendar-events li {
+  background-color: rgb(235, 235, 235) !important;
+  color: rgb(194, 194, 194);
+}
+
+.calendar-day-outmonth .calendar-events li:hover {
+  filter: opacity(80%);
+}
